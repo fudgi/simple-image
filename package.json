@@ -1,6 +1,6 @@
 {
   "name": "@fudgi-packages/editorjs-simple-image",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "codex editor",
     "image",
@@ -10,7 +10,7 @@
   ],
   "description": "SimpleImage Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/simple-image",
+  "repository": "https://github.com/fudgi/simple-image",
   "files": [
     "dist"
   ],

@@ -3,27 +3,31 @@
 # Simple Image Tool
 
 Provides Image Blocks for the [Editor.js](https://editorjs.io).
+Based on https://github.com/editor-js/simple-image and https://github.com/editor-js/simple-image-tutorial/tree/master
 
-Works only with pasted image URLs and requires no server-side uploader.
+Works with pasted images, inserting images via toolbox.
+Converts image at BASE 64
 
 ![](assets/image-uploading.gif)
+![](assets/image-toolbox.jpg)
 
 ## Installation
 
 Get the package
 
 ```shell
-yarn add @editorjs/simple-image
+yarn add @fudgi-packages/editorjs-simple-image
+```
+
+```shell
+npm i @fudgi-packages/editorjs-simple-image
 ```
 
 Include module at your application
 
 ```javascript
-import SimpleImage from "@editorjs/simple-image";
+import SimpleImage from "@fudgi-packages/editorjs-simple-image";
 ```
-
-Optionally, you can load this tool from CDN [JsDelivr CDN](https://cdn.jsdelivr.net/npm/@editorjs/simple-image)
-
 
 ## Usage
 
@@ -46,35 +50,12 @@ var editor = EditorJS({
 
 This Tool has no config params
 
-## Tool's settings
-
-![](https://capella.pics/c74cdeec-3405-48ac-a960-f784188cf9b4.jpg)
-
-1. Add border
-
-2. Stretch to full-width
-
-3. Add background
-
-## Output data
-
-| Field          | Type      | Description                     |
-| -------------- | --------- | ------------------------------- |
-| url            | `string`  | image's url                     |
-| caption        | `string`  | image's caption                 |
-| withBorder     | `boolean` | add border to image             |
-| withBackground | `boolean` | need to add background          |
-| stretched      | `boolean` | stretch image to screen's width |
-
 ```json
 {
   "type": "image",
   "data": {
     "url": "https://www.tesla.com/tesla_theme/assets/img/_vehicle_redesign/roadster_and_semi/roadster/hero.jpg",
-    "caption": "Roadster // tesla.com",
-    "withBorder": false,
-    "withBackground": false,
-    "stretched": true
+    "caption": "Roadster // tesla.com"
   }
 }
 ```
