@@ -13,6 +13,7 @@ export default {
       name: "SimpleImage",
       fileName: "simple-image",
     },
+    minify: false,
   },
   define: {
     NODE_ENV: JSON.stringify(NODE_ENV),

@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/simple-image",
-  "version": "1.6.0",
+  "name": "@fudgi-packages/editorjs-simple-image",
+  "version": "0.0.11",
   "keywords": [
     "codex editor",
     "image",
