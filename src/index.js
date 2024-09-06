@@ -122,6 +122,10 @@ export default class SimpleImage {
     return this.nodes.wrapper;
   }
   _createImage() {
+    if (!this.nodes.wrapper) {
+      const wrapper = this._make("div", [this.CSS.baseClass, this.CSS.wrapper]);
+      this.nodes.wrapper = wrapper;
+    }
     this.nodes.wrapper.innerHTML = "";
     this.nodes.imageHolder = null;
     this.nodes.image = null;
@@ -151,7 +155,7 @@ export default class SimpleImage {
     this.nodes.imageHolder = imageHolder;
     this.nodes.image = image;
     this.nodes.caption = caption;
-    return wrapper;
+    return this.nodes.wrapper;
   }
 
   /**
@@ -257,6 +261,7 @@ export default class SimpleImage {
 
         this.onDropHandler(file).then((data) => {
           this.data = data;
+          this._createImage(data.url);
         });
 
         break;
