@@ -173,6 +173,14 @@ export default class SimpleImage {
     });
   }
 
+  validate(savedData) {
+    if (!savedData.url.trim()) {
+      return false;
+    }
+
+    return true;
+  }
+
   /**
    * Sanitizer rules
    */
