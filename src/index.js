@@ -119,6 +119,7 @@ export default class SimpleImage {
       this._createImage(data.url);
     });
     this.nodes.wrapper.appendChild(input);
+    input.click();
     return this.nodes.wrapper;
   }
   _createImage() {
